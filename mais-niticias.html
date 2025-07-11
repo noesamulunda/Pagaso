@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PagaSó - Facilta  bué!</title>
+    <link rel="icon" href="img/icon.webp">
+
+   <!-- Bootstrap 5.3 e FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- CSS Swiper -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Css custumizate--> 
+     <link rel="stylesheet" href="css/custom.css">
+    
+
+</head>
+<body>
+
+<!-- Pré loader -->
+
+<div id="preloader">
+    <div class="spinner">
+      <div class="text-center">
+            <h1>
+                <span class="paga">Paga</span> <span class="so">Só</span>
+            </h1>
+            <p>Facilita bué!</p>
+       </div>
+      <div class="orbit">
+       
+        <span class="dot" style="--i:0;"></span>
+        <span class="dot" style="--i:1;"></span>
+        <span class="dot" style="--i:2;"></span>
+        <span class="dot" style="--i:3;"></span>
+        <span class="dot" style="--i:4;"></span>
+        <span class="dot" style="--i:5;"></span>
+        <span class="dot" style="--i:6;"></span>
+        <span class="dot" style="--i:7;"></span>
+        <span class="dot" style="--i:8;"></span>
+        <span class="dot" style="--i:9;"></span>
+      </div>
+    </div>
+  </div>
+
+<!-- Principal -->
+
+  <main style="display:none;">
+
+    <!-- whatsapp -->
+
+    <div class="whatsapp-float">
+
+        <a href="https://wa.me/946303939?text=Olá,%20quero%20ajuda!" target="_blank" class="whatsapp-icon" id="whatsappBtn">
+            <i class="fab fa-whatsapp"></i>
+            <div class="whatsapp-badge">1</div>
+        </a>
+        <div class="whatsapp-bubble" data-translate="fala">Fale, comigo!</div>
+    </div>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top1" class="scroll-top1 d-flex align-items-center justify-content-center" style="text-decoration: none;">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+ 
+ <!-- Top Bar -->
+  <div class="custom-topbar py-0">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      
+      <!-- Navegação -->
+      <nav class="nav ">
+        <a class="custom-nav-link active" href="index.html">Particulares</a>
+        <!--a class="custom-nav-link" href="#">Empresas</a-->
+        <a class="custom-nav-link" href="parceiros.html">Parceiros</a>
+        <a class="custom-nav-link" href="https://www.kwanzabet.ao/pt/" target="_blank">Apostar <span style="color: #DEDE25;" >Kwanzabet</span></a>
+      </nav>
+
+      <!-- Botão de pesquisa -->
+      <div class="custom-search-toggle ms-auto" onclick="toggleSearch()">
+
+        <div class="datetime-container">
+            <div class="datetime-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span id="dataAtual">--/--/----</span>
+            </div>
+            <div class="datetime-item">
+                <i class="fa-regular fa-clock"></i>
+                <span id="horaAtual">--:--:--</span>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+
+    <!-- Campo de busca -->
+    <!--div class="custom-search-area" id="customSearchContainer">
+      <div class="container py-3">
+        <hr class="text-white">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="custom-search-box d-flex">
+              <input type="text" class="form-control" placeholder="Digite o que procura...">
+              <button class="btn">Pesquisar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div-->
+  </div>
+
+
+ <!-- Navbar transparente -->
+<nav class="navbar navbar-expand-lg nav-fixedd" id="navbar-one">
+  <!-- Container com fundo branco e sombra bonita -->
+  <div class="container  navbar-box" style="background-color: #fff;">
+    <a class="navbar-brand ms-2" href="#">
+      <img src="img/logotipo.png" alt="Logo" style="height: 45px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link " href="index.html">INICIO</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#sec-1">CONHEÇA</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#servico">SERVIÇO</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#agente">AGENTE</a></li>
+        
+        <li class="nav-item"><a class="nav-link active" href="#evento">NOTÍCIAS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+      </ul>
+    </div>
+    <div class="d-none d-lg-block">
+
+      <!-- Botão Minha Conta -->
+      <a href="https://pagaso.co.ao/login" target="_blank" class="my-account-btn text-center text-decoration-none d-inline-block">
+        <i class="far fa-user mb-1"></i>
+        <div>Minha conta</div>
+        <span class="corner top-left"></span>
+        <span class="corner top-right"></span>
+        <span class="corner bottom-left"></span>
+        <span class="corner bottom-right"></span>
+      </a>
+
+    </div>
+  </div>
+</nav><br><br><br><br>
+
+
+ 
+
+<!-- Notícias -->
+
+
+<section class="container py-5 mt-5" id="evento">
+  <h2 class="text-center mb-5 text-danger"><i class="fas fa-plus me-2"></i>Mais Notícias</h2>
+  <div class="row g-4">
+
+    <!-- Card de notícia -->
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="news-card shadow-lg position-relative overflow-hidden">
+        <a href="detalhes-noticia.html">
+          <img src="img/n1.png" class="w-100 h-100 news-img" alt="Imagem da notícia">
+        </a>
+        <div class="news-body p-4">
+          <h5 class="news-title text-white mb-2">PAGASÓ </h5>
+          <p class="news-description text-light mb-3"> Disponibiliza na sua plataforma, a recargas Unitel.</p>
+          <small class="text-white d-flex align-items-center"><i class="far fa-clock me-2 text-danger"></i>Publicado em 30/06/2025 às 10:30</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repita para outras 2 notícias -->
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="news-card shadow-lg position-relative overflow-hidden">
+        <a href="detalhes-noticia.html">
+          <img src="img/n2.png" class="w-100 h-100 news-img" alt="Imagem da notícia">
+        </a>
+        <div class="news-body p-4">
+          <h5 class="news-title text-white mb-2">PAGASÓ E SORRIA!</h5>
+          <p class="news-description text-light mb-3">Todos os serviços que precisas num só lugar.</p>
+          <small class="text-white d-flex align-items-center"><i class="far fa-clock me-2 text-danger"></i>Publicado em 24/06/2025 às 11:00</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="news-card shadow-lg position-relative overflow-hidden">
+        <a href="detalhes-noticia.html">
+          <img src="img/n3.png" class="w-100 h-100 news-img" alt="Imagem da notícia">
+        </a>
+        <div class="news-body p-4">
+          <h5 class="news-title text-white mb-2">PAGASÓ E DSTV!</h5>
+          <p class="news-description text-light mb-3">Carrega tua DSTV em um agente PagaSó.</p>
+          <small class="text-white d-flex align-items-center"><i class="far fa-clock me-2 text-danger"></i>Publicado em 24/06/2025 às 12:15</small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="news-card shadow-lg position-relative overflow-hidden">
+        <a href="detalhes-noticia.html">
+          <img src="img/n4.png" class="w-100 h-100 news-img" alt="Imagem da notícia">
+        </a>
+        <div class="news-body p-4">
+          <h5 class="news-title text-white mb-2">MAIS NET, MAIS ALEGRIA!</h5>
+          <p class="news-description text-light mb-3">Carrega a tua AFRINET, em um agente ou em nossa plataforma.</p>
+          <small class="text-white d-flex align-items-center"><i class="far fa-clock me-2 text-danger"></i>Publicado em 24/06/2025 às 12:15</small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="news-card shadow-lg position-relative overflow-hidden">
+        <a href="detalhes-noticia.html">
+          <img src="img/n5.png" class="w-100 h-100 news-img" alt="Imagem da notícia">
+        </a>
+        <div class="news-body p-4">
+          <h5 class="news-title text-white mb-2"> PAGASÓ, FACILITA BUÉ!</h5>
+          <p class="news-description text-light mb-3">Impossível ficar sem navegar, a PagaSó facilite Bué.</p>
+          <small class="text-white d-flex align-items-center"><i class="far fa-clock me-2 text-danger"></i>Publicado em 24/06/2025 às 12:15</small>
+        </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6 col-lg-4 mb-3">
+      <div class="news-card shadow-lg position-relative overflow-hidden">
+        <a href="detalhes-noticia.html">
+          <img src="img/n6.png" class="w-100 h-100 news-img" alt="Imagem da notícia">
+        </a>
+        <div class="news-body p-4">
+          <h5 class="news-title text-white mb-2"> PAGASÓ, APOSTAS!</h5>
+          <p class="news-description text-light mb-3">As suas apostas, não escapa desta vez</p>
+          <small class="text-white d-flex align-items-center"><i class="far fa-clock me-2 text-danger"></i>Publicado em 24/06/2025 às 12:15</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- App store-->
+
+    <div class="col-sm-12">
+
+      
+
+    </div>
+
+
+
+  </div>
+</section><br><br><br>
+
+
+<!-- App store-->
+ 
+<div class="container my-5 mt-4">
+  
+
+  <!-- Card -->
+  <div class="row align-items-center app-card mt-5">
+    <!-- Coluna texto e botões -->
+    <div class="col-md-6 order-md-1">
+      <h2 class="fw-bold mb-3">Descarrega a nossa App</h2>
+      <p class="text-muted mb-4">Baixe o nosso aplicativo e comece já a vender! Bué fácil e Bué Simples</p>
+      <div class="download-btns d-flex gap-3 flex-wrap">
+        <a href="https://play.google.com/store/apps/details?id=com.pagaso.facilita.bue.pagaso&hl=pt" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.pagaso.facilita.bue.pagaso&hl=pt" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+      </div>
+    </div>
+    <!-- Coluna da imagem -->
+    <div class="col-md-6 order-md-2 text-center mt-4 mt-md-0">
+      <img src="img/app.png" alt="App Preview" class="img-fluid app">
+    </div>
+  </div>
+</div>
+
+
+<!-- Fale connosco-->
+
+<!-- Área de contacto -->
+<section class="py-5 bg-light" id="contacto">
+  <div class="container">
+    <h2 class="text-center mb-5  text-danger">Estamos aqui para você</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 shadow border-0 p-4 contact-info-card">
+          
+          <!-- Endereço Luanda -->
+          <div class="contact-block">
+            <div class="d-flex align-items-center"> <!-- align-items-center aqui -->
+              <i class="fa-solid fa-location-dot fa-lg text-danger me-3"></i>
+              <div>
+                <h5 class="mb-1">Endereço</h5>
+                <p class="mb-0 small">Luanda / Talatona, Edifício Atlantic Business nº 28</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="separator"></div>
+
+          <!-- Endereço Benguela -->
+          <div class="contact-block">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-location-dot fa-lg text-danger me-3"></i>
+              <div>
+                <h5 class="mb-1">Endereço</h5>
+                <p class="mb-0 small">Benguela / Rua Domingos do Ó, Edifício Acácias</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="separator"></div>
+
+          <!-- Telefone -->
+          <div class="contact-block">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-phone fa-lg text-danger me-3"></i>
+              <div>
+                <h5 class="mb-1">Telefone</h5>
+                <p class="mb-0 small">(+244) 944 090 151</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="separator"></div>
+
+          <!-- E-mail -->
+          <div class="contact-block mb-3">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-envelope fa-lg text-danger me-3"></i>
+              <div>
+                <h5 class="mb-1">E-mail</h5>
+                <p class="mb-0 small">pagaso@tiv-tecnologia.com</p>
+              </div>
+            </div>
+          </div>
+
+        
+          <!-- Mapa -->
+          <div class="map-container mt-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.9678608872614!2d13.403927875958484!3d-12.584369852145176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1bafd10a14c4bc31%3A0xebcc6ddc8208266a!2sR.%20Domingos%20do%20%C3%93%2C%20Benguela!5e0!3m2!1sen!2sao!4v1750863773346!5m2!1sen!2sao" 
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Card direito -->
+      <div class="col-md-6">
+        <div class="card  shadow border-0 p-4 contact-form-card">
+          <h5 class="mb-4 text-center">Envie-nos uma mensagem</h5>
+          <form>
+            <div class="mb-3 position-relative">
+              <input type="text" class="form-control custom-input" placeholder="Nome" required>
+            </div>
+            <div class="mb-3 position-relative">
+              <input type="email" class="form-control custom-input" placeholder="Email" required>
+            </div>
+            <div class="mb-3 position-relative">
+              <input type="text" class="form-control custom-input" placeholder="Assunto" required>
+            </div>
+            <div class="mb-3 position-relative">
+              <textarea class="form-control custom-input" placeholder="Mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gradient-plus1 w-100 mt-3">
+              <i class="fa-solid fa-paper-plane me-2"></i>Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><br>
+<footer class="bg-dark-custom1 text-white pt-5 pb-5 py-5">
+
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Col 1: Logo + Redes Sociais -->
+      <div class="col-md-4 col-lg-3">
+        <img src="img/logotipo.png" alt="Logotipo" class="img-fluid mb-3" style="max-height: 60px;">
+        <h6 class="mb-3">Siga-nos</h6>
+        <div class="d-flex gap-3 mb-2" id="redes">
+          <a href="https://www.facebook.com/pagaso.angola/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/pagas%C3%B3" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/pagaso.angola/?hl=en" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <small class="text-white d-block mt-3">Acompanhe as últimas novidades.</small>
+      </div>
+
+      <!-- Col 2: Fale Conosco -->
+      <div class="col-md-4 col-lg-3">
+        <h5 class="mb-3">Fale Conosco</h5>
+        <p class="small mb-0">PAGASÓ - O APP que disponibiliza vários serviços do dia-a-dia na palma da sua mão a um clique.</p>
+        <div class="download-btns d-flex gap-3 flex-wrap mt-4">
+          <a href="https://play.google.com/store/apps/details?id=com.pagaso.facilita.bue.pagaso&hl=pt" target="_blank" style="border: 1px solid #ccc;"><i class="fab fa-apple"></i> App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.pagaso.facilita.bue.pagaso&hl=pt" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+        </div>
+      </div>
+
+      <!-- Col 3: Links -->
+      <div class="col-md-4 col-lg-3">
+        <h5 class="mb-3">Nossos Links</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="#" class="footer-link">Inicio</a></li>
+          <li><a href="#" class="footer-link">Começar</a></li>
+          <li><a href="#" class="footer-link">Serviços</a></li>
+          <li><a href="#" class="footer-link">Agente</a></li>
+          <li><a href="#" class="footer-link">Notícias</a></li>
+          <li><a href="#" class="footer-link">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Produtos -->
+      <div class="col-md-4 col-lg-3">
+        <h5 class="mb-3">Produtos</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="#" class="footer-link">Para Estabelecimentos</a></li>
+          <li><a href="#" class="footer-link">Para Microempreendedores</a></li>
+          <li><a href="#" class="footer-link">Para Quiosque</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyrigth -->
+    <div class="row mt-4 pt-3 border-top border-secondary">
+      <div class="col text-center">
+        <small>&copy; 2025 Copyright Pagasó | TIV Tecnologia. Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </div>
+
+
+
+</footer>
+
+
+
+
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+   <!-- Link cdn jquery--> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <!-- Link cdn bootstrap js--> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.6/js/bootstrap.bundle.min.js" 
+    integrity="sha512-TqV44vJ6VstCMM8ksoxkOy/xxO97sKJUSxOCgLdysw4QRw4kTVLwOmxlzRnutf6NuNMtt48UMJEMyZZ7hMMebQ=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+     <!-- JS Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+     <!-- interno js--> 
+
+     <script src="js/main.js"></script>
+
+     <script src="js/rotate-whatsapp.js"></script>
+
+    <!-- JavaScript -->
+  <script>
+    function toggleSearch() {
+      const container = document.getElementById("customSearchContainer");
+      container.classList.toggle("show");
+    }
+  </script>
+
+  <!---Nav fixo-->
+
+  <script>
+
+    var navbar = $('#navbar-one');
+    $(window).on('scroll',function(){
+
+      var top =$(this).scrollTop();
+
+      
+
+      if (top > 50) {
+
+        navbar.addClass('nav-fixo');
+
+     
+        
+      } else {
+
+        navbar.removeClass('nav-fixo');
+        
+      }
+    })
+
+  </script>
+
+
+<script>
+    // Animação on scroll simples
+    const fadeSections = document.querySelectorAll('.fade-in');
+
+    const onScroll = () => {
+      fadeSections.forEach((sec) => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 100) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+
+
+<script>
+  const swiper = new Swiper('.central-swiper', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+</script>
+
+
+<script>
+  const meuSwiper = new Swiper(".meu-slider", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2000,
+    },
+  });
+</script>
+
+<script>
+
+
+
+  /**
+   * Scroll top button
+   */
+  let scrollTop = document.querySelector('.scroll-top1');
+
+  function toggleScrollTop() {
+    if (scrollTop) {
+      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+    }
+  }
+  scrollTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  window.addEventListener('load', toggleScrollTop);
+  document.addEventListener('scroll', toggleScrollTop);
+
+</script>
+
+<script>
+  // animação simples que dá um fade-in nos cards quando a página carrega
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.news-card').forEach((card, i) => {
+      setTimeout(() => card.classList.add('show'), i * 200);
+    });
+  });
+</script>
+
+<script>
+        function atualizarDataHora() {
+            const agora = new Date();
+            // Formatar data
+            let dia = agora.getDate().toString().padStart(2, '0');
+            let mes = (agora.getMonth() + 1).toString().padStart(2, '0');
+            let ano = agora.getFullYear();
+
+            // Formatar hora
+            let hh = agora.getHours().toString().padStart(2, '0');
+            let mm = agora.getMinutes().toString().padStart(2, '0');
+            let ss = agora.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById('dataAtual').textContent = `${dia}/${mes}/${ano}`;
+            document.getElementById('horaAtual').textContent = `${hh}:${mm}:${ss}`;
+        }
+
+        setInterval(atualizarDataHora, 1000); // Atualiza a cada segundo
+        atualizarDataHora(); // Chamada inicial
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PagaSó - Facilta  bué!</title>
+    <link rel="icon" href="img/icon.webp">
+
+   <!-- Bootstrap 5.3 e FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- CSS Swiper -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Css custumizate--> 
+     <link rel="stylesheet" href="css/custom.css">
+    
+
+</head>
+<body>
+
+<!-- Pré loader -->
+
+<div id="preloader">
+    <div class="spinner">
+      <div class="text-center">
+            <h1>
+                <span class="paga">Paga</span> <span class="so">Só</span>
+            </h1>
+            <p>Facilita bué!</p>
+       </div>
+      <div class="orbit">
+       
+        <span class="dot" style="--i:0;"></span>
+        <span class="dot" style="--i:1;"></span>
+        <span class="dot" style="--i:2;"></span>
+        <span class="dot" style="--i:3;"></span>
+        <span class="dot" style="--i:4;"></span>
+        <span class="dot" style="--i:5;"></span>
+        <span class="dot" style="--i:6;"></span>
+        <span class="dot" style="--i:7;"></span>
+        <span class="dot" style="--i:8;"></span>
+        <span class="dot" style="--i:9;"></span>
+      </div>
+    </div>
+  </div>
+
+<!-- Principal -->
+
+  <main style="display:none;">
+
+    <!-- whatsapp -->
+
+    <div class="whatsapp-float">
+
+        <a href="https://wa.me/946303939?text=Olá,%20quero%20ajuda!" target="_blank" class="whatsapp-icon" id="whatsappBtn">
+            <i class="fab fa-whatsapp"></i>
+            <div class="whatsapp-badge">1</div>
+        </a>
+        <div class="whatsapp-bubble" data-translate="fala">Fale, comigo!</div>
+    </div>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top1" class="scroll-top1 d-flex align-items-center justify-content-center" style="text-decoration: none;">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+ 
+ <!-- Top Bar -->
+  <div class="custom-topbar py-0">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      
+      <!-- Navegação -->
+      <nav class="nav ">
+        <a class="custom-nav-link active" href="index.html">Particulares</a>
+        <!--a class="custom-nav-link" href="#">Empresas</a-->
+        <a class="custom-nav-link" href="parceiros.html">Parceiros</a>
+        <a class="custom-nav-link" href="https://www.kwanzabet.ao/pt/" target="_blank">Apostar <span style="color: #DEDE25;" >Kwanzabet</span></a>
+      </nav>
+
+      <!-- Botão de pesquisa -->
+      <div class="custom-search-toggle ms-auto" onclick="toggleSearch()">
+        <!--i class="fas fa-search"></i>
+        <span>Pesquisar</span-->
+
+          <div class="datetime-container">
+            <div class="datetime-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span id="dataAtual">--/--/----</span>
+            </div>
+            <div class="datetime-item">
+                <i class="fa-regular fa-clock"></i>
+                <span id="horaAtual">--:--:--</span>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+
+    <!-- Campo de busca -->
+    <!--div class="custom-search-area" id="customSearchContainer">
+      <div class="container py-3">
+        <hr class="text-white">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="custom-search-box d-flex">
+              <input type="text" class="form-control" placeholder="Digite o que procura...">
+              <button class="btn">Pesquisar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div-->
+  </div>
+
+   <!-- Navbar slide show-->
+<!-- Carousel -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators" style="z-index: 2;">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+    </div>
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="img/2.png" alt="Slide 2" class="laptop">
+        <img src="img/mobile2.png" alt="Slide 1" class="mobile">
+      </div>
+      <div class="carousel-item">
+        <img src="img/3.png" alt="Slide 3" class="laptop">
+        <img src="img/mobile3.png" alt="Slide 1" class="mobile">
+      </div>
+
+      <div class="carousel-item ">
+        <img src="img/1.png" alt="Slide 1" class="laptop">
+        <img src="img/mobile1.png" alt="Slide 1" class="mobile">
+      </div>
+      
+      <div class="carousel-item">
+        <img src="img/4.png" alt="Slide 3" class="laptop">
+        <img src="img/mobile4.png" alt="Slide 1" class="mobile">
+      </div>
+    </div>
+    
+  </div>
+
+ <!-- Navbar transparente -->
+<nav class="navbar navbar-expand-lg nav-fixedd" id="navbar-one">
+  <!-- Container com fundo branco e sombra bonita -->
+  <div class="container   navbar-box" style="background-color: #fff;">
+    <a class="navbar-brand ms-1" href="#">
+      <img src="img/logotipo.png" alt="Logo" style="height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link active" href="#">INICIO</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sec-1">CONHEÇA</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servico">SERVIÇO</a></li>
+        <li class="nav-item"><a class="nav-link" href="#agente">AGENTE</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="#evento">NOTÍCIAS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+      </ul>
+    </div>
+    <div class="d-none d-lg-block">
+
+      <!-- Botão Minha Conta -->
+      <a href="https://pagaso.co.ao/login" target="_blank" class="my-account-btn text-center text-decoration-none d-inline-block">
+        <i class="far fa-user mb-1"></i>
+        <div>Minha conta</div>
+        
+      </a>
+
+    </div>
+  </div>
+</nav>
+
+
+ <!-- Cards sobre -->
+
+<div class="container py-5">
+    <div class="main-card">
+
+      <!-- Seção 1 -->
+      <div class="section flex-fill">
+        <div class="icon-circle">
+          <i class="fas fa-mobile-alt fa-lg"></i>
+        </div>
+        <div class="section-title">APP Android para Smartphone</div>
+        <div class="section-text">
+          APP Android num Smartphone com tráfego de dados.
+        </div>
+      </div>
+
+      <!-- Seção 2 com fundo colorido -->
+      <div class="section middle-section flex-fill">
+        <div class="icon-circle icon-circle-ns">
+          <i class="fas fa-store fa-lg"></i>
+        </div>
+        <div class="section-title">PagaSÓ Web Shop</div>
+        <div class="section-text">
+          Possibilidade de venda em vários dispositivos. Criação de outros vendedores e gestão das vendas e dos saldos.
+        </div>
+      </div>
+
+      <!-- Seção 3 -->
+      <div class="section flex-fill">
+        <div class="icon-circle">
+          <i class="fas fa-link fa-lg"></i>
+        </div>
+        <div class="section-title">PagaSÓ API</div>
+        <div class="section-text">
+          Integração direta entre Plataformas, Venda dos serviços PagaSó nos pontos de Venda dos Parceiros.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Conheça paga só. -->
+
+
+  <!-- Sessão 1 -->
+  <section class="py-5 bg-light fade-in mt-5" id="sec-1">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Texto à esquerda -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2 class="about-title">Somos uma rede de multi-serviços que quer facilitar a vida dos Angolanos!</h2>
+          <p class="about-content mt-4 mb-4">
+            A PagaSó oferece um dos maiores ecossistemas de transações eletrônicas do país. Presente em toda Angola, 
+            atuamos em parceria com grandes empresas de telefonia, serviços e de entretenimento.
+          </p>
+          <p class="about-content mt-3 mb-4">
+            Temos como objetivo aproximar nossos parceiros de seus potenciais consumidores, por meio de uma 
+            plataforma completa de produtos e serviços, 
+            que se conecta a uma ampla rede de estabelecimentos comerciais.
+          </p>
+          <p class="about-content mt-3 mb-4">
+            Contamos com o maior portfólio de recargas electronicas do país, soluções de pagamentos de 
+            TV e electricidadel, para gerar maior 
+            lucratividade no ponto de venda, além de ajudar a gerenciar o seu negócio!
+          </p>
+          <ul style="list-style: none;">
+            <li  class="mb-3 ">
+               <i class="fas fa-check-double text-danger"></i>
+              <span class="ml-3">Venda de recargas pré-pagas para telefone;</span>
+              
+            </li>
+            <li class="mb-3">
+               <i class="fas fa-check-double text-danger"></i>
+              Venda de recargas pré-pagas para televisão;
+            </li>
+            <li  class="mb-3">
+               <i class="fas fa-check-double text-danger"></i>
+              Venda de recargas pré-pagas para energia electrica;
+            </li>
+            <li  class="mb-3">
+              <i class="fas fa-check-double text-danger"></i>
+              Divulgação do estabelecimento nas redes sociais;
+            </li>
+          </ul>
+        </div>
+        <!-- Imagem à direita -->
+        <div class="col-md-6 text-center">
+          <img src="img/sobre2.png" alt="Sobre a empresa" class="img-fluid about-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão 2 -->
+  <section class="py-5 fade-in" id="sec-2">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Imagem à esquerda com clip-path -->
+        <div class="col-md-6 text-center mb-4 mb-md-0">
+          <img src="img/sobre0.png" alt="Nosso time" class="img-fluid about-img clip-image">
+        </div>
+        <!-- Texto à direita -->
+        <div class="col-md-6">
+          <h2 class="about-title">Porquê confiar na PagaSó?</h2>
+          
+
+          <ul class="list-group list-group-flush mt-5">
+            <li class="list-group-item"><i class="fa-regular fa-check-square"></i>Mais de 8 anos de experiência no mercado;</li>
+            <li class="list-group-item"><i class="fa-regular fa-check-square"></i>Portfólio de recargas electrónicas atraente;</li>
+            <li class="list-group-item"><i class="fa-regular fa-check-square"></i>Presença em todas as províncias do País;</li>
+            <li class="list-group-item"><i class="fa-regular fa-check-square"></i>Atendimento dia a dia;</li>
+            <li class="list-group-item"><i class="fa-regular fa-check-square"></i>Apoio ao cliente eficaz e diário;</li>
+            <li class="list-group-item"><i class="fa-regular fa-check-square"></i>Parceria com as principais operadoras do País;</li>
+            <li class="list-group-item"><i class="fa-regular fa-check-square"></i>Mais de 1000 pontos de vendas conectados à nossa rede;</li>
+            <li class="list-group-item"><i class="fa-regular fa-check-square"></i>Segurança e simplicidade para empresas e consumidores;</li>
+            <li class="list-group-item"><i class="fa-regular fa-check-square"></i>Equipe dedicada à inovação, aprimoramento constante das soluções e desenvolvimento de novos produtos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Confira nossos produtos -->
+<section class="secao-cards text-center py-5" style="background-color: #f5f5f5;">
+  <div class="container">
+    <h2 class="position-relative d-inline-block mb-5" style="color:#333; font-weight:700;">
+      Confira nossos produtos
+      
+    </h2>
+
+    <div class="row mt-5 g-4 justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm overflow-hidden cartao">
+          <div class="position-relative">
+            <img src="img/tv.png" class="card-img-top" alt="Imagem 1" >
+            <span class="icon-overlay"><i class="fas fa-tv"></i></span>
+          </div>
+          <div class="card-body text-center card-b">
+            <h5 style="font-weight: 700;">Recarga de TV</h5>
+            <p>Com as recargas de TV pré-pagas você amplia as opções e atrai mais clientes. Parceria com a ZAPTv e DSTv.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm overflow-hidden cartao">
+          <div class="position-relative">
+            <img src="img/telefone.png" class="card-img-top" alt="Imagem 2" >
+            <span class="icon-overlay"><i class="fas fa-mobile-alt"></i></span>
+          </div>
+          <div class="card-body text-center card-b">
+            <h5 style="font-weight: 700;">Recarga de Telefone</h5>
+            <p>Venda recargas das principais operadoras de telefonia do país. Conecte os seus clientes a UNITEL, MOVICEL etc.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm overflow-hidden cartao">
+          <div class="position-relative">
+            <img src="img/energia.png" class="card-img-top" alt="Imagem 3" >
+            <span class="icon-overlay"><i class="fas fa-bolt"></i></span>
+          </div>
+          <div class="card-body text-center card-b">
+            <h5 style="font-weight: 700;">Recarga de Electricidade</h5>
+            <p>Aumente sua cesta de produtos, com venda de recargas de electricidade de Angola.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm overflow-hidden cartao">
+          <div class="position-relative">
+            <img src="img/aposta.png" class="card-img-top" alt="Imagem 4" >
+            <span class="icon-overlay"><i class="fas fa-futbol"></i></span>
+          </div>
+          <div class="card-body text-center card-b">
+            <h5 style="font-weight: 700;">Apostas Desportivas</h5>
+            <p>Oferecemos aos nossos clientes a possibilidade de recarregar as principais plataformas de apostas desportivas em Angola, 
+              como PremierBet, ElephantBet, BantuBet e Mo Jogos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   <!-- Vantagem-->
+    
+  
+
+<section class="vantagens-section position-relative py-5 mt-5">
+
+
+  <div class="container">
+
+    <h2 class="text-center" id="about-c"> <span class="text-paga">Quais as vantagens da</span> PagaSó <br>
+para o seu negócio?</h2>
+
+    <div class="row align-items-center">
+
+      <!-- Coluna esquerda -->
+      <div class="col-md-12 col-lg-3 d-flex flex-column gap-4 card-vt">
+        <div class="feature-card p-3 text-center shadow-sm">
+          <i class="fa-solid fa-user-plus mb-2 fs-2 text-danger"></i>
+          <h5>Mais clientes</h5>
+          <p>Oferecemos uma vasta gama de soluções para você atrair mais clientes, com um extenso portfólio de recargas electrónicas e venda de recargas de eletricidade.</p>
+        </div>
+        <div class="feature-card p-3 text-center shadow-sm">
+          <i class="fa-solid fa-map-location-dot mb-2 fs-2 text-danger"></i>
+          <h5>Em toda Angola</h5>
+          <p>Faça parte de uma rede com presença em todo o país e tenha a oportunidade de se conectar cada vez mais!</p>
+        </div>
+      </div>
+
+
+
+      <!-- Carrossel central usando Swiper -->
+      <div class="col-md-12 col-lg-6 text-center my-4 my-md-0" id="slider-img-sw">
+        <div class="swiper central-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+             
+              <img src="img/s4.jpg" class="img-fluid vertical-img shadow-lg" alt="Imagem 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <img src="img/s3.jpg" class="img-fluid vertical-img shadow-lg" alt="Imagem 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <img src="img/v1.png" class="img-fluid vertical-img shadow-lg" alt="Imagem 3">
+            </div>
+
+            <!--Slide 3 -->
+            <div class="swiper-slide">
+              <img src="img/v2.png" class="img-fluid vertical-img shadow-lg" alt="Imagem 3">
+            </div>
+
+
+            <!--Slide 3 -->
+            <div class="swiper-slide">
+              <img src="img/v3.png" class="img-fluid vertical-img shadow-lg" alt="Imagem 3">
+            </div>
+
+
+          </div>
+          <!-- Paginação e navegação -->
+          <div class="swiper-pagination"></div>
+          
+        </div>
+      </div>
+
+      <!-- Coluna direita -->
+      <div class="col-md-12 col-lg-3 d-flex flex-column gap-4 card-vt mt-3" id="cardvt2">
+        <div class="feature-card p-3 text-center shadow-sm">
+          <i class="fa-solid fa-headset mb-2 fs-2 text-danger"></i>
+          <h5>Atendimento de excelência</h5>
+          <p>Conte com um suporte ágil e eficaz para o que você precisar no dia a dia! Promotores de vendas presentes em sua região.</p>
+        </div>
+        <div class="feature-card p-3 text-center shadow-sm">
+          <i class="fa-solid fa-lock mb-2 fs-2 text-danger"></i>
+          <h5>Segurança garantida</h5>
+          <p>Acesso por inserção correta das credenciais do cliente (e-mail/login e palavra-passe).</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Elementos que criam os cortes -->
+  <div class="cut-top-left"></div>
+  <div class="cut-bottom-right"></div>
+
+</section>
+
+
+ <!-- Serviços ou parceiros-->
+  
+ <div class="container-fluid mt-5">
+  <div class="row g-0 min-vh-100" id="servico">
+    <!-- Coluna da imagem -->
+    <div class="col-md-5 image-col">
+      <img src="img/serv.png" alt="Imagem lateral" />
+    </div>
+
+    <!-- Coluna com os cards -->
+    <div class="col-md-7 d-flex align-items-center p-4">
+      <div class="row row-cols-1 row-cols-sm-2 g-4 w-100">
+
+        <!-- Card 1 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/ende.png" alt="Imagem Card 1" />
+            <h6 class="mt-4 mb-3">Mais detalhes</h6>
+           
+            <a href="#" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img-nova/unitel.png" alt="Imagem Card 2" />
+            <h6 class="mt-4 mb-3">Mais detalhes</h6>
+           
+            <a href="https://unitel.ao/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/africel.png" alt="Imagem Card 3" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.africell.ao/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/movicel.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.movicel.co.ao/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/zap.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.zap.co.ao/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/zap-wifi.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.zap.co.ao/zap-fibra/wifi-6" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/zap-fibra.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.zap.co.ao/zap-fibra/pacotes-tv-net" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/dstv.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.dstv.com/pt-ao/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img-nova/bantu.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.bantubet.co.ao/pt/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/neflix.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.netflix.com/ao/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/kwanzabet.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.kwanzabet.ao/pt/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/premier-bet.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.premierbet.co.ao/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/888-bet.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://www.888sport.com/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-lg-4">
+          <div class="custom-card">
+            <img src="img/mobet.png" alt="Imagem Card 4" />
+               <h6 class="mt-4 mb-3">Mais detalhes</h6>
+            <a href="https://m.mobet.ao/pt/" target="_blank" class="link-icon"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Agentes-->
+ 
+<!-- Área personalizada -->
+<section class="secao-info py-5 mt-5">
+  <div class="container">
+    <div class="row align-items-center" id="agente">
+      <!-- Coluna esquerda -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h2 class="meu-titulo mb-2" id="app">App Android num Smartphone e um site no computador</h2>
+        <p class="meu-texto">
+          O Agente PagaSó tem a possibilidade de comercializar os serviços disponíveis através da internet, 
+          dentro do site da PagaSó ou pelo aplicativo instalado no seu smartphone.
+        </p>
+        <ul style="list-style-type: none;">
+          <li  class="mb-3 ">
+               <i class="fas fa-check-double text-danger"></i>
+              <span class="ml-3">Fácil utilização;</span>
+              
+            </li>
+            <li  class="mb-3 ">
+               <i class="fas fa-check-double text-danger"></i>
+              <span class="ml-3">Design Interactivo;</span>
+              
+            </li>
+            <li  class="mb-3 ">
+               <i class="fas fa-check-double text-danger"></i>
+              <span class="ml-3">Aplicativo disponível na PlayStore;</span>
+              
+            </li>
+            <li  class="mb-3 ">
+               <i class="fas fa-check-double text-danger"></i>
+              <span class="ml-3">Solução mais prática para vender em diferentes pontos de venda;</span>
+              
+            </li>
+            <li  class="mb-3 ">
+               <i class="fas fa-check-double text-danger"></i>
+              <span class="ml-3">Segurança e Privacidade;</span>
+              
+            </li>
+            <li  class="mb-3 ">
+               <i class="fas fa-check-double text-danger"></i>
+              <span class="ml-3">Controle melhorado das execuções;</span>
+              
+            </li>
+            <li  class="mb-3 ">
+               <i class="fas fa-check-double text-danger"></i>
+              <span class="ml-3">Controle das transações;</span>
+              
+            </li>
+            <li  class="mb-3 ">
+               <i class="fas fa-check-double text-danger"></i>
+              <span class="ml-3">Gestão das contas dos vendedores.</span>
+              
+            </li>
+        </ul>
+      </div>
+
+      <!-- Coluna direita -->
+      <div class="col-md-7">
+        <!-- Swiper container -->
+        <div class="meu-slider swiper">
+          <div class="swiper-wrapper">
+            <!-- Cada slide -->
+            <div class="swiper-slide meu-slide">
+              <img src="img/agente.jpg" alt="Imagem 1" class="img-fluid meu-slide-img" />
+            </div>
+            <div class="swiper-slide meu-slide">
+              <img src="img/agente.jpg" alt="Imagem 2" class="img-fluid meu-slide-img" />
+            </div>
+          </div>
+          <!-- Paginação -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br><br>
+
+
+<!-- card bonus-->
+
+<div class="container-fluid promo-section py-5">
+    <div class="row g-4 px-4">
+
+      <!-- 1º Bónus Simples e Directo -->
+      <div class="col-md-6 col-lg-3">
+        <div class="promo-card">
+          <div class="promo-icon">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <h5 class="promo-title">Bónus Simples e Directo</h5>
+          <p class="promo-text">Cada venda debita o valor facial da Recarga, e credita o Bónus ao mesmo tempo.</p>
+        </div>
+      </div>
+
+      <!-- 2º Plafond - de Operador -->
+      <div class="col-md-6 col-lg-3">
+        <div class="promo-card">
+          <div class="promo-icon">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h5 class="promo-title">Plafond de Operador</h5>
+          <p class="promo-text">O valor depositado é usado para todos os serviços e produtos disponíveis na plataforma.</p>
+        </div>
+      </div>
+
+      <!-- 3º BackOffice de Reporting Poderosa -->
+      <div class="col-md-6 col-lg-3">
+        <div class="promo-card">
+          <div class="promo-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h5 class="promo-title">BackOffice Poderoso</h5>
+          <p class="promo-text">BackOffice activo com capacidade de suporte para todas as questões.</p>
+        </div>
+      </div>
+
+      <!-- 4º Vendas Multi Nível -->
+      <div class="col-md-6 col-lg-3">
+        <div class="promo-card">
+          <div class="promo-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h5 class="promo-title">Vendas Multi Nível</h5>
+          <p class="promo-text">O Agente pode realizar vendas e monitorar as contas dos seus vendedores.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+ <!--Canal de venda-->
+ 
+ 
+
+ <!-- Área personalizada -->
+<section class="secao-info py-5 mt-5">
+  <div class="container">
+
+    <h2 class="text-center" id="about-c"> <span class="text-paga">Canais de</span> Vendas <br>
+      <span class="text-center" style="display: inline-block; text-align: center; font-size: 16px; color: #555  ; font-weight: normal;">Temos 3 soluções de negócio adaptadas às suas necessidades</span>
+ 
+    </h2> 
+    <div class="row align-items-center">
+      <!-- Coluna esquerda -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h2 class="meu-titulo mb-2" id="confie">Confie em quem já é referência em serviços digitais (API)</h2>
+        <p class="meu-texto">
+          Conectada com todas as operadoras de angola, a nossa plataforma já é referência em tecnologias de alta qualidade para adquirência e em serviços de pagamento. Agora, resolvemos avançar e 
+          oferecer todas as facilidades tecnológicas de recargas em um só lugar, Aqui!.
+        </p>
+        <p class="meu-texto">
+          Criamos a PagaSó APi para melhorar a experiência na integração de vendas de recargas realizada entre 
+          sistemas. Por isso, chega de problemas técnicos sem solução. Com a PagaSó APi, o distribuidor realiza comercialização dos 
+          serviços PagaSó dentro da sua 
+          infra-estrutura software, usufruindo de todas as formas de segurança interna em vigor.
+
+        </p>
+      </div>
+
+  
+      <!-- Card -->
+      <div class="col-md-7 my-4">
+
+        <div class="image-container">
+        <img src="img/canal.png" alt="Imagem destacada" />
+      </div>
+
+     
+    </div>
+  </div>
+</section> <br><br><br>
+
+
+
+<!-- Perguntas frequentes-->
+
+
+<section class="faq-section" id="faq">
+  <div class="container" >
+    <h2 class="faq-title mb-4">Perguntas Frequentes</h2>
+    <div class="row align-items-center">
+      <!-- imagem à esquerda -->
+      <div class="col-md-6 text-center">
+        <img src="img/faq.png" alt="FAQ image" class="faq-img img-fluid">
+      </div>
+      <!-- accordion à direita -->
+      <div class="col-md-6">
+        <div class="accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" 
+              aria-expanded="true" aria-controls="collapseOne">
+                <i class="fas fa-question-circle me-2"></i> Como faço para me tornar cliente da PagaSó?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Preencha o cadastro que entraremos em contato para passar todas as condições para ser nosso cliente. 
+                Você também entrar em contato pelos telefones ou falar pelo Whatsapp.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <i class="fas fa-question-circle me-2"></i> Quanto tempo demora o processo de cadastro?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Em até 30 minutos entraremos em contato.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <i class="fas fa-question-circle me-2"></i> Quais os produtos que posso vender sendo cliente PagaSó?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Na Pagasó nosso cliente tem acesso a venda de recargas eletrônicas da ENDE, Unitel, Movicel, ZAPtv e DStV, seguro de vida, 
+                pacotes de internet além de outros produtos.
+              </div>
+            </div>
+          </div>
+
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" 
+              aria-expanded="false" aria-controls="collapseThree1">
+                <i class="fas fa-question-circle me-2"></i> Quanto ganho(lucro) para vender os produtos da PagaSó?
+              </button>
+            </h2>
+            <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+               Na Pagasó Cada produto vendido possui um desconto (lucro) específico. Entre em contato e esclareça todas as suas dúvidas.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" 
+              aria-expanded="false" aria-controls="collapseThree2">
+                <i class="fas fa-question-circle me-2"></i> Como posso  vender os produtos da PagaSó?
+              </button>
+            </h2>
+            <div id="collapseThree2" class="accordion-collapse collapse" aria-labelledby="headingThree2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+               Usando seu celular, computador, tablet ou comprando um celular com as configurações necessarias
+                (Versão minima 4.0 Android e 4GB de memoria).
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3"
+               aria-expanded="false" aria-controls="collapseThree3">
+                <i class="fas fa-question-circle me-2"></i> Qual o custo para revender os produtos da PagaSó?
+              </button>
+            </h2>
+            <div id="collapseThree3" class="accordion-collapse collapse" aria-labelledby="headingThree3" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+               Usando seu celular, computador ou tablet o custo é ZERO. Mas, se preferir comprar um aparelho novo, o custo para revenda será o custo do celular. Os carregamentos para revenda não consideramos custos, mas sim investimento, 
+               já que o valor total retornará após a venda com o lucro.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree4" 
+              aria-expanded="false" aria-controls="collapseThree4">
+                <i class="fas fa-question-circle me-2"></i> Quando tiver algum problema com minhas vendas e/ou com o equipamento com quem falo?
+              </button>
+            </h2>
+            <div id="collapseThree4" class="accordion-collapse collapse" aria-labelledby="headingThree4" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+               É só entrar em contato pelo site ou ligar para o nosso Call Center, de segunda a sexta-feira, das 8hs às 17hs e aos sábados das 8hs às 12hs, 
+               no telefone +244 931 489 995. 
+               Você também pode entrar em contato pelo Whatsapp.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree5" 
+              aria-expanded="false" aria-controls="collapseThree5">
+                <i class="fas fa-question-circle me-2"></i> Quantos equipamentos posso ter?
+              </button>
+            </h2>
+            <div id="collapseThree5" class="accordion-collapse collapse" aria-labelledby="headingThree5" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+               Não há limite de quantidade e nem de senhas de acesso (segurança).
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- fim accordion -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Notícias -->
+
+
+<section class="container py-5" id="evento">
+  <h2 class="text-center mb-5 text-danger"><i class="fas fa-newspaper me-2"></i>Últimas Notícias</h2>
+  <div class="row g-4">
+
+    <!-- Card de notícia -->
+    <div class="col-md-6 col-lg-4">
+      <div class="news-card shadow-lg position-relative overflow-hidden">
+        <a href="detalhes-noticia.html">
+          <img src="img/n1.png" class="w-100 h-100 news-img" alt="Imagem da notícia">
+        </a>
+        <div class="news-body p-4">
+          <h5 class="news-title text-white mb-2">PAGASÓ </h5>
+          <p class="news-description text-light mb-3"> Disponibiliza na sua plataforma, a recargas Unitel.</p>
+          <small class="text-white d-flex align-items-center"><i class="far fa-clock me-2 text-danger"></i>Publicado em 30/06/2025 às 10:30</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repita para outras 2 notícias -->
+    <div class="col-md-6 col-lg-4">
+      <div class="news-card shadow-lg position-relative overflow-hidden">
+        <a href="detalhes-noticia.html">
+          <img src="img/n2.png" class="w-100 h-100 news-img" alt="Imagem da notícia">
+        </a>
+        <div class="news-body p-4">
+          <h5 class="news-title text-white mb-2">PAGASÓ E SORRIA!</h5>
+          <p class="news-description text-light mb-3">Todos os serviços que precisas num só lugar.</p>
+          <small class="text-white d-flex align-items-center"><i class="far fa-clock me-2 text-danger"></i>Publicado em 24/06/2025 às 11:00</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="news-card shadow-lg position-relative overflow-hidden">
+        <a href="detalhes-noticia.html">
+          <img src="img/n3.png" class="w-100 h-100 news-img" alt="Imagem da notícia">
+        </a>
+        <div class="news-body p-4">
+          <h5 class="news-title text-white mb-2">PAGASÓ E DSTV!</h5>
+          <p class="news-description text-light mb-3">Carrega tua Dstv em um agente PagaSó.</p>
+          <small class="text-white d-flex align-items-center"><i class="far fa-clock me-2 text-danger"></i>Publicado em 24/06/2025 às 12:15</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- App store-->
+
+    <div class="col-sm-12">
+
+      <div class="d-flex justify-content-center align-items-center mt-5">  
+        <a href="mais-niticias.html" class="btn btn-gradient-plus text-decoration-none">
+          <i class="fa-solid fa-plus"></i>
+        </a>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</section><br><br><br>
+
+
+<!-- App store-->
+ 
+<div class="container my-5 mt-4">
+  
+
+  <!-- Card -->
+  <div class="row align-items-center app-card mt-5">
+    <!-- Coluna texto e botões -->
+    <div class="col-md-6 order-md-1">
+      <h2 class="fw-bold mb-3">Descarrega a nossa App</h2>
+      <p class="text-muted mb-4">Baixe o nosso aplicativo e comece já a vender! Bué fácil e Bué Simples</p>
+      <div class="download-btns d-flex gap-3 flex-wrap">
+        <a href="https://play.google.com/store/apps/details?id=com.pagaso.facilita.bue.pagaso&hl=pt" target="_blank"><i class="fab fa-apple"></i> App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.pagaso.facilita.bue.pagaso&hl=pt" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+      </div>
+    </div>
+    <!-- Coluna da imagem -->
+    <div class="col-md-6 order-md-2 text-center mt-4 mt-md-0">
+      <img src="img/app.png" alt="App Preview" class="img-fluid app">
+    </div>
+  </div>
+</div>
+
+
+<!-- Fale connosco-->
+
+<!-- Área de contacto -->
+<section class="py-5 bg-light" id="contacto">
+  <div class="container">
+    <h2 class="text-center mb-5  text-danger">Estamos aqui para você</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 shadow border-0 p-4 contact-info-card">
+          
+          <!-- Endereço Luanda -->
+          <div class="contact-block">
+            <div class="d-flex align-items-center"> <!-- align-items-center aqui -->
+              <i class="fa-solid fa-location-dot fa-lg text-danger me-3"></i>
+              <div>
+                <h5 class="mb-1">Endereço</h5>
+                <p class="mb-0 small">Luanda / Talatona, Edifício Atlantic Business nº 28</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="separator"></div>
+
+          <!-- Endereço Benguela -->
+          <div class="contact-block">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-location-dot fa-lg text-danger me-3"></i>
+              <div>
+                <h5 class="mb-1">Endereço</h5>
+                <p class="mb-0 small">Benguela / Rua Domingos do Ó, Edifício Acácias</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="separator"></div>
+
+          <!-- Telefone -->
+          <div class="contact-block">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-phone fa-lg text-danger me-3"></i>
+              <div>
+                <h5 class="mb-1">Telefone</h5>
+                <p class="mb-0 small">(+244) 944 090 151</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="separator"></div>
+
+          <!-- E-mail -->
+          <div class="contact-block mb-3">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-envelope fa-lg text-danger me-3"></i>
+              <div>
+                <h5 class="mb-1">E-mail</h5>
+                <p class="mb-0 small">pagaso@tiv-tecnologia.com</p>
+              </div>
+            </div>
+          </div>
+
+        
+          <!-- Mapa -->
+          <div class="map-container mt-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.9678608872614!2d13.403927875958484!3d-12.584369852145176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1bafd10a14c4bc31%3A0xebcc6ddc8208266a!2sR.%20Domingos%20do%20%C3%93%2C%20Benguela!5e0!3m2!1sen!2sao!4v1750863773346!5m2!1sen!2sao" 
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Card direito -->
+      <div class="col-md-6">
+        <div class="card  shadow border-0 p-4 contact-form-card">
+          <h5 class="mb-4 text-center">Envie-nos uma mensagem</h5>
+          <form>
+            <div class="mb-3 position-relative">
+              <input type="text" class="form-control custom-input" placeholder="Nome" required>
+            </div>
+            <div class="mb-3 position-relative">
+              <input type="email" class="form-control custom-input" placeholder="Email" required>
+            </div>
+            <div class="mb-3 position-relative">
+              <input type="text" class="form-control custom-input" placeholder="Assunto" required>
+            </div>
+            <div class="mb-3 position-relative">
+              <textarea class="form-control custom-input" placeholder="Mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gradient-plus1 w-100 mt-3">
+              <i class="fa-solid fa-paper-plane me-2"></i>Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><br>
+<footer class="bg-dark-custom1 text-white pt-5 pb-5 py-5">
+
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Col 1: Logo + Redes Sociais -->
+      <div class="col-md-4 col-lg-3">
+        <img src="img/logotipo.png" alt="Logotipo" class="img-fluid mb-3" style="max-height: 60px;">
+        <h6 class="mb-3">Siga-nos</h6>
+        <div class="d-flex gap-3 mb-2" id="redes">
+          <a href="https://www.facebook.com/pagaso.angola/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/pagas%C3%B3" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/pagaso.angola/?hl=en" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <small class="text-white d-block mt-3">Acompanhe as últimas novidades.</small>
+      </div>
+
+      <!-- Col 2: Fale Conosco -->
+      <div class="col-md-4 col-lg-3">
+        <h5 class="mb-3">Fale Conosco</h5>
+        <p class="small mb-0">PAGASÓ - O APP que disponibiliza vários serviços do dia-a-dia na palma da sua mão a um clique.</p>
+        <div class="download-btns d-flex gap-3 flex-wrap mt-4">
+          <a href="https://play.google.com/store/apps/details?id=com.pagaso.facilita.bue.pagaso&hl=pt" target="_blank" 
+          style="border: 1px solid #e0e0e0;"><i class="fab fa-apple"></i> App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.pagaso.facilita.bue.pagaso&hl=pt" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>
+        </div>
+      </div>
+
+      <!-- Col 3: Links -->
+      <div class="col-md-4 col-lg-3">
+        <h5 class="mb-3">Nossos Links</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="#" class="footer-link">Inicio</a></li>
+          <li><a href="#" class="footer-link">Começar</a></li>
+          <li><a href="#" class="footer-link">Serviços</a></li>
+          <li><a href="#" class="footer-link">Agente</a></li>
+          <li><a href="#" class="footer-link">Notícias</a></li>
+          <li><a href="#" class="footer-link">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Produtos -->
+      <div class="col-md-4 col-lg-3">
+        <h5 class="mb-3">Produtos</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="#" class="footer-link">Para Estabelecimentos</a></li>
+          <li><a href="#" class="footer-link">Para Microempreendedores</a></li>
+          <li><a href="#" class="footer-link">Para Quiosque</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyrigth -->
+    <div class="row mt-4 pt-3 border-top border-secondary">
+      <div class="col text-center">
+        <small>&copy; 2025 Copyright Pagasó | TIV Tecnologia. Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </div>
+
+
+
+</footer>
+
+
+</main>
+
+
+   <!-- Link cdn jquery--> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <!-- Link cdn bootstrap js--> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.6/js/bootstrap.bundle.min.js" 
+    integrity="sha512-TqV44vJ6VstCMM8ksoxkOy/xxO97sKJUSxOCgLdysw4QRw4kTVLwOmxlzRnutf6NuNMtt48UMJEMyZZ7hMMebQ=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+     <!-- JS Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+     <!-- interno js--> 
+
+     <script src="js/main.js"></script>
+
+     <script src="js/rotate-whatsapp.js"></script>
+
+    <!-- JavaScript -->
+  <script>
+    function toggleSearch() {
+      const container = document.getElementById("customSearchContainer");
+      container.classList.toggle("show");
+    }
+  </script>
+
+  <!---Nav fixo-->
+
+  <script>
+
+    var navbar = $('#navbar-one');
+    $(window).on('scroll',function(){
+
+      var top =$(this).scrollTop();
+
+      
+
+      if (top > 50) {
+
+        navbar.addClass('nav-fixo');
+
+     
+        
+      } else {
+
+        navbar.removeClass('nav-fixo');
+        
+      }
+    })
+
+  </script>
+
+
+<script>
+    // Animação on scroll simples
+    const fadeSections = document.querySelectorAll('.fade-in');
+
+    const onScroll = () => {
+      fadeSections.forEach((sec) => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 100) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+
+
+<script>
+  const swiper = new Swiper('.central-swiper', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+</script>
+
+
+<script>
+  const meuSwiper = new Swiper(".meu-slider", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2000,
+    },
+  });
+</script>
+
+<script>
+
+
+
+  /**
+   * Scroll top button
+   */
+  let scrollTop = document.querySelector('.scroll-top1');
+
+  function toggleScrollTop() {
+    if (scrollTop) {
+      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+    }
+  }
+  scrollTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  window.addEventListener('load', toggleScrollTop);
+  document.addEventListener('scroll', toggleScrollTop);
+
+</script>
+
+<script>
+  // animação simples que dá um fade-in nos cards quando a página carrega
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.news-card').forEach((card, i) => {
+      setTimeout(() => card.classList.add('show'), i * 200);
+    });
+  });
+</script>
+
+<script>
+        function atualizarDataHora() {
+            const agora = new Date();
+            // Formatar data
+            let dia = agora.getDate().toString().padStart(2, '0');
+            let mes = (agora.getMonth() + 1).toString().padStart(2, '0');
+            let ano = agora.getFullYear();
+
+            // Formatar hora
+            let hh = agora.getHours().toString().padStart(2, '0');
+            let mm = agora.getMinutes().toString().padStart(2, '0');
+            let ss = agora.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById('dataAtual').textContent = `${dia}/${mes}/${ano}`;
+            document.getElementById('horaAtual').textContent = `${hh}:${mm}:${ss}`;
+        }
+
+        setInterval(atualizarDataHora, 1000); // Atualiza a cada segundo
+        atualizarDataHora(); // Chamada inicial
+    </script>
+
+</body>
+</html>
